@@ -1,1 +1,0 @@
-# YOLO_Labelling_Tool
