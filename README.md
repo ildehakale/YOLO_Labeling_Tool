@@ -72,7 +72,6 @@ YOLO_Labelling_Tool/
 ├── README.md              # This file
 │
 ├── config/
-│   ├── __init__.py
 │   ├── settings.py        # Application configuration
 │   └── embedded_assets.py # Embedded logo
 │
@@ -80,33 +79,27 @@ YOLO_Labelling_Tool/
 │   └── (your models)
 │
 ├── controllers/
-│   ├── __init__.py
 │   └── labeling_controller.py  # Main business logic
 │
 ├── repositories/
-│   ├── __init__.py
 │   ├── interfaces.py      # Repository interfaces
 │   └── file_repositories.py  # File-based repositories
 │
 ├── services/
 │   └── detection/
-│       ├── __init__.py
 │       ├── interfaces.py  # Detection interfaces
 │       ├── detectors.py   # YOLO/ONNX/SAHI detectors
 │       └── detection_service.py  # Detection logic
 │
 ├── models/                # Data models (not ML models)
-│   ├── __init__.py
 │   └── base.py           # BoundingBox, Image classes
 │
 ├── ui/
 │   └── components/
-│       ├── __init__.py
 │       ├── base.py       # UI components
 │       └── image_viewer.py  # Image display widget
 │
 └── views/
-    ├── __init__.py
     ├── main_window.py    # Main window UI
     └── main_window_slots.py  # Event handlers
 ```
