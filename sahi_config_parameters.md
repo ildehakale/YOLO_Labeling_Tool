@@ -1,166 +1,163 @@
-# SAHI Uygulamasında Kullanılan Tüm Config Parametreleri
+# SAHI Configuration Parameters - Complete Reference
 
-SAHI (Slicing Aided Hyper Inference), büyük görüntülerde küçük nesne tespiti için kullanılan bir framework'tür. Bu dokümanda SAHI'de kullanılan tüm config parametreleri detayıyla listelenmiştir.
+SAHI (Slicing Aided Hyper Inference) is a framework for detecting small objects in large images. This document lists all configuration parameters used in SAHI with detailed explanations.
 
-## 1. Slicing (Dilimlemme) Parametreleri
+## 1. Slicing Parameters
 
-### Temel Dilim Parametreleri
-- **`slice_height`** (int): Dilim yüksekliği (piksel cinsinden)
-  - Örnek: `256`, `512`, `640`
-  - Varsayılan: Görüntü boyutuna bağlı
+### Basic Slice Parameters
+- **`slice_height`** (int): Slice height in pixels
+  - Examples: `256`, `512`, `640`
+  - Default: Depends on image size
 
-- **`slice_width`** (int): Dilim genişliği (piksel cinsinden)
-  - Örnek: `256`, `512`, `640`
-  - Varsayılan: Görüntü boyutuna bağlı
+- **`slice_width`** (int): Slice width in pixels
+  - Examples: `256`, `512`, `640`
+  - Default: Depends on image size
 
-### Overlap (Örtüşme) Parametreleri
-- **`overlap_height_ratio`** (float): Yükseklik için örtüşme oranı
-  - Değer aralığı: 0.0 - 1.0
-  - Örnek: `0.1`, `0.2`, `0.3`
-  - Varsayılan: `0.2`
+### Overlap Parameters
+- **`overlap_height_ratio`** (float): Overlap ratio for height
+  - Range: 0.0 - 1.0
+  - Examples: `0.1`, `0.2`, `0.3`
+  - Default: `0.2`
 
-- **`overlap_width_ratio`** (float): Genişlik için örtüşme oranı
-  - Değer aralığı: 0.0 - 1.0
-  - Örnek: `0.1`, `0.2`, `0.3`
-  - Varsayılan: `0.2`
+- **`overlap_width_ratio`** (float): Overlap ratio for width
+  - Range: 0.0 - 1.0
+  - Examples: `0.1`, `0.2`, `0.3`
+  - Default: `0.2`
 
-- **`overlap_ratio`** (float): Hem yükseklik hem genişlik için tek örtüşme oranı
-  - Değer aralığı: 0.0 - 1.0
-  - Örnek: `0.2`
+- **`overlap_ratio`** (float): Single overlap ratio for both height and width
+  - Range: 0.0 - 1.0
+  - Example: `0.2`
 
-## 2. Model Parametreleri
+## 2. Model Parameters
 
-### Model Yolu ve Konfigürasyon
-- **`model_path`** (str): Model dosyasının yolu
-  - Örnek: `"path/to/model.pt"`, `"yolo11n.pt"`
+### Model Path and Configuration
+- **`model_path`** (str): Path to the model file
+  - Examples: `"path/to/model.pt"`, `"yolo11n.pt"`
 
-- **`model_config_path`** (str): Model konfigürasyon dosyasının yolu
-  - MMDetection için config dosyası yolu
+- **`model_config_path`** (str): Path to model configuration file
+  - For MMDetection config file path
 
-- **`model_device`** (str): Çıkarım için kullanılacak cihaz
-  - Seçenekler: `"cpu"`, `"cuda"`, `"cuda:0"`, `"cuda:1"`
-  - Varsayılan: `"cpu"`
+- **`model_device`** (str): Device for inference
+  - Options: `"cpu"`, `"cuda"`, `"cuda:0"`, `"cuda:1"`
+  - Default: `"cpu"`
 
-### Model Güven Parametreleri
-- **`model_confidence_threshold`** (float): Model güven eşiği
-  - Değer aralığı: 0.0 - 1.0
-  - Örnek: `0.25`, `0.5`, `0.7`
-  - Varsayılan: `0.25`
+### Model Confidence Parameters
+- **`model_confidence_threshold`** (float): Model confidence threshold
+  - Range: 0.0 - 1.0
+  - Examples: `0.25`, `0.5`, `0.7`
+  - Default: `0.25`
 
-- **`iou_threshold`** (float): IoU (Intersection over Union) eşiği
-  - Değer aralığı: 0.0 - 1.0
-  - Örnek: `0.25`, `0.5`, `0.7`
-  - Varsayılan: `0.5`
+- **`iou_threshold`** (float): IoU (Intersection over Union) threshold
+  - Range: 0.0 - 1.0
+  - Examples: `0.25`, `0.5`, `0.7`
+  - Default: `0.5`
 
-## 3. Postprocess (İşlem Sonrası) Parametreleri
+## 3. Postprocess Parameters
 
-### Postprocess Türü
-- **`postprocess_type`** (str): İşlem sonrası birleştirme türü
-  - Seçenekler: `"UNIONMERGE"`, `"NMS"`
-  - Varsayılan: `"UNIONMERGE"`
+### Postprocess Type
+- **`postprocess_type`** (str): Type of postprocess merging
+  - Options: `"UNIONMERGE"`, `"NMS"`
+  - Default: `"UNIONMERGE"`
 
-### Postprocess Eşleştirme
-- **`postprocess_match_metric`** (str): Eşleştirme metriği
-  - Seçenekler: `"IOU"` (Intersection over Union), `"IOS"` (Intersection over Smaller)
-  - Varsayılan: `"IOU"`
+### Postprocess Matching
+- **`postprocess_match_metric`** (str): Matching metric
+  - Options:
+    - `"IOU"` (Intersection over Union) - Returns ratio of intersection area to union
+    - `"IOS"` (Intersection over Smaller) - Returns ratio of intersection area to smaller box's area
+  - Default: `"IOU"`
 
-- **IOU** : Returns the ratio of intersection area to the union
+- **`postprocess_match_threshold`** (float): Matching threshold
+  - Range: 0.0 - 1.0
+  - Examples: `0.5`, `0.6`, `0.7`
+  - Default: `0.5`
 
-- **IOS** : Returns the ratio of intersection area to the smaller box's area
+- **`postprocess_class_agnostic`** (bool): Class-agnostic matching
+  - Options: `True`, `False`
+  - Default: `False`
 
-- **`postprocess_match_threshold`** (float): Eşleştirme eşiği
-  - Değer aralığı: 0.0 - 1.0
-  - Örnek: `0.5`, `0.6`, `0.7`
-  - Varsayılan: `0.5`
+## 4. Output and Save Parameters
 
-- **`postprocess_class_agnostic`** (bool): Sınıf bağımsız eşleştirme
-  - Seçenekler: `True`, `False`
-  - Varsayılan: `False`
+### Output Directories
+- **`project`** (str): Project directory
+  - Example: `"runs/predict"`
 
-## 4. Çıktı ve Kaydetme Parametreleri
+- **`name`** (str): Run name
+  - Examples: `"exp1"`, `"test_run"`
 
-### Çıktı Dizinleri
-- **`project`** (str): Proje dizini
-  - Örnek: `"runs/predict"`
+- **`source`** (str): Source image/directory path
+  - Examples: `"image.jpg"`, `"images/"`, `"video.mp4"`
 
-- **`name`** (str): Çalıştırma adı
-  - Örnek: `"exp1"`, `"test_run"`
+### Save Options
+- **`save_dir`** (str): Directory to save results
 
-- **`source`** (str): Kaynak görüntü/dizin yolu
-  - Örnek: `"image.jpg"`, `"images/"`, `"video.mp4"`
+- **`export_pickle`** (bool): Export in pickle format
+  - Default: `False`
 
-### Kaydetme Seçenekleri
-- **`save_dir`** (str): Sonuçların kaydedileceği dizin
+- **`export_crop`** (bool): Export cropped predictions
+  - Default: `False`
 
-- **`export_pickle`** (bool): Pickle formatında kaydetme
-  - Varsayılan: `False`
+- **`visual_bbox_thickness`** (int): Bounding box thickness in visualization
+  - Examples: `1`, `2`, `3`
 
-- **`export_crop`** (bool): Kırpılmış tahminleri kaydetme
-  - Varsayılan: `False`
+- **`visual_text_size`** (float): Text size in visualization
+  - Examples: `0.3`, `0.5`, `0.8`
 
-- **`visual_bbox_thickness`** (int): Görselleştirmede bbox kalınlığı
-  - Örnek: `1`, `2`, `3`
+- **`visual_text_thickness`** (int): Text thickness in visualization
+  - Examples: `1`, `2`
 
-- **`visual_text_size`** (float): Görselleştirmede metin boyutu
-  - Örnek: `0.3`, `0.5`, `0.8`
-
-- **`visual_text_thickness`** (int): Görselleştirmede metin kalınlığı
-  - Örnek: `1`, `2`
-
-
-## 5. COCO Dataset Parametreleri
+## 5. COCO Dataset Parameters
 
 ### COCO Slicing
-- **`ignore_negative_samples`** (bool): Negatif örnekleri yoksay
-  - Varsayılan: `False`
+- **`ignore_negative_samples`** (bool): Ignore negative samples
+  - Default: `False`
 
-- **`out_dir`** (str): Çıktı dizini
+- **`out_dir`** (str): Output directory
 
-- **`train_split_rate`** (float): Eğitim veri bölümleme oranı
-  - Değer aralığı: 0.0 - 1.0
-  - Örnek: `0.8`, `0.9`
+- **`train_split_rate`** (float): Training data split rate
+  - Range: 0.0 - 1.0
+  - Examples: `0.8`, `0.9`
 
 ### COCO Evaluation
-- **`dataset_json_path`** (str): COCO dataset JSON dosya yolu
+- **`dataset_json_path`** (str): COCO dataset JSON file path
 
-- **`result_json_path`** (str): Sonuç JSON dosya yolu
+- **`result_json_path`** (str): Result JSON file path
 
-- **`type`** (str): Değerlendirme türü
-  - Seçenekler: `"bbox"`, `"segm"`
+- **`type`** (str): Evaluation type
+  - Options: `"bbox"`, `"segm"`
 
-## 6. Video İnference Parametreleri
+## 6. Video Inference Parameters
 
-- **`video_path`** (str): Video dosya yolu
+- **`video_path`** (str): Video file path
 
-- **`frame_skip_interval`** (int): Atlanan frame sayısı
-  - Örnek: `0`, `1`, `5`
+- **`frame_skip_interval`** (int): Number of frames to skip
+  - Examples: `0`, `1`, `5`
 
-## 7. FiftyOne Entegrasyon Parametreleri
+## 7. FiftyOne Integration Parameters
 
-- **`dataset_name`** (str): FiftyOne dataset adı
+- **`dataset_name`** (str): FiftyOne dataset name
 
-- **`launch_fiftyone`** (bool): FiftyOne UI'ı başlat
-  - Varsayılan: `True`
+- **`launch_fiftyone`** (bool): Launch FiftyOne UI
+  - Default: `True`
 
-## 8. Gelişmiş Parametreler
+## 8. Advanced Parameters
 
-### Performans Optimizasyonu
-- **`auto_slice_resolution`** (bool): Otomatik dilim çözünürlüğü
-  - Varsayılan: `True`
+### Performance Optimization
+- **`auto_slice_resolution`** (bool): Automatic slice resolution
+  - Default: `True`
 
-- **`slice_inference_batch_size`** (int): Dilim çıkarım batch boyutu
-  - Örnek: `1`, `4`, `8`
+- **`slice_inference_batch_size`** (int): Slice inference batch size
+  - Examples: `1`, `4`, `8`
 
-### Hata Ayıklama
-- **`verbose`** (int): Detaylı çıktı seviyesi
-  - Seçenekler: `0`, `1`, `2`
+### Debugging
+- **`verbose`** (int): Verbose output level
+  - Options: `0`, `1`, `2`
 
-- **`return_dict`** (bool): Dictionary olarak sonuç döndür
-  - Varsayılan: `True`
+- **`return_dict`** (bool): Return results as dictionary
+  - Default: `True`
 
-## Örnek Kullanım
+## Usage Examples
 
-### CLI Komutu
+### CLI Command
 ```bash
 sahi predict \
     --model_path "yolo11n.pt" \
@@ -181,7 +178,7 @@ sahi predict \
 from sahi import AutoDetectionModel
 from sahi.predict import get_sliced_prediction
 
-# Model yükleme
+# Load model
 detection_model = AutoDetectionModel.from_pretrained(
     model_type='yolov8',
     model_path="yolo11n.pt",
@@ -205,9 +202,45 @@ result = get_sliced_prediction(
 )
 ```
 
-## Notlar
+## Best Practices
 
-- Parametreler framework'e (YOLOv8, MMDetection, vb.) göre değişiklik gösterebilir
-- Optimal parametre değerleri görüntü boyutuna ve nesne türüne bağlıdır
-- Slice boyutları GPU belleğine göre ayarlanmalıdır
-- Overlap oranları tespit kalitesini artırır ancak işlem süresini uzatır
+### Slice Size Recommendations
+- **Small objects (pedestrians, vehicles)**: Use smaller slices (128-256)
+- **Medium objects**: Use medium slices (256-512)
+- **Large objects**: Use larger slices (512-1024)
+- **High resolution images (4K+)**: Start with 512-640 slices
+
+### Overlap Ratio Guidelines
+- **Standard detection**: 0.2 overlap ratio works well for most cases
+- **Dense objects**: Increase to 0.3-0.4 for better recall
+- **Sparse objects**: Can reduce to 0.1 for faster processing
+- **Trade-off**: Higher overlap improves accuracy but increases processing time
+
+### Confidence Threshold Tuning
+- **High precision needed**: Use 0.5-0.7 threshold
+- **High recall needed**: Use 0.1-0.25 threshold
+- **Balanced detection**: Use 0.25-0.4 threshold
+- **Class-specific**: Different classes may need different thresholds
+
+### Performance Optimization
+- **GPU Memory**: Adjust slice size based on available VRAM
+  - 4GB VRAM: Use 256-512 slices
+  - 8GB VRAM: Use 512-1024 slices
+  - 16GB+ VRAM: Use 1024-2048 slices
+- **Batch Processing**: Use `slice_inference_batch_size` for faster inference
+- **CPU Fallback**: Reduce slice size when using CPU (256-512 recommended)
+
+### Postprocess Settings
+- **UNIONMERGE**: Best for general use, handles overlapping predictions well
+- **NMS**: Faster but may miss some edge cases
+- **IOU Metric**: Good for regular shaped objects
+- **IOS Metric**: Better for nested or contained objects
+
+## Important Notes
+
+- Parameters may vary depending on the framework (YOLOv8, MMDetection, etc.)
+- Optimal parameter values depend on image size and object type
+- Slice sizes should be adjusted based on GPU memory
+- Overlap ratios improve detection quality but increase processing time
+- Always validate parameter changes with test images before batch processing
+- Consider using `auto_slice_resolution` for automatic parameter tuning

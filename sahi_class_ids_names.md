@@ -1,141 +1,141 @@
-# SAHI Class ID'leri ve İsimleri - Kapsamlı Liste
+# SAHI Class IDs and Names - Complete Reference
 
-SAHI, genellikle COCO dataset ile eğitilmiş modelleri (YOLOv8, YOLOv11, MMDetection vb.) kullanır. Bu nedenle class ID'ler ve isimleri COCO dataset standardını takip eder.
+SAHI typically uses models trained on the COCO dataset (YOLOv8, YOLOv11, MMDetection, etc.). Therefore, class IDs and names follow the COCO dataset standard.
 
-## COCO Dataset 80 Sınıf Listesi (Class ID: İsim)
+## COCO Dataset 80 Class List
 
-### İnsanlar ve Hayvanlar
-| Class ID | İngilizce İsim | Türkçe İsim | Kategori |
-|----------|----------------|-------------|-----------|
-| 0 | person | kişi/insan | İnsan |
-| 15 | bird | kuş | Hayvan |
-| 16 | cat | kedi | Hayvan |
-| 17 | dog | köpek | Hayvan |
-| 18 | horse | at | Hayvan |
-| 19 | sheep | koyun | Hayvan |
-| 20 | cow | inek | Hayvan |
-| 21 | elephant | fil | Hayvan |
-| 22 | bear | ayı | Hayvan |
-| 23 | zebra | zebra | Hayvan |
-| 24 | giraffe | zürafa | Hayvan |
+### People and Animals
+| Class ID | Name | Category |
+|----------|------|----------|
+| 0 | person | Human |
+| 15 | bird | Animal |
+| 16 | cat | Animal |
+| 17 | dog | Animal |
+| 18 | horse | Animal |
+| 19 | sheep | Animal |
+| 20 | cow | Animal |
+| 21 | elephant | Animal |
+| 22 | bear | Animal |
+| 23 | zebra | Animal |
+| 24 | giraffe | Animal |
 
-### Ulaşım Araçları
-| Class ID | İngilizce İsim | Türkçe İsim | Kategori |
-|----------|----------------|-------------|-----------|
-| 1 | bicycle | bisiklet | Ulaşım |
-| 2 | car | araba | Ulaşım |
-| 3 | motorcycle | motosiklet | Ulaşım |
-| 4 | airplane | uçak | Ulaşım |
-| 5 | bus | otobüs | Ulaşım |
-| 6 | train | tren | Ulaşım |
-| 7 | truck | kamyon | Ulaşım |
-| 8 | boat | tekne/bot | Ulaşım |
+### Vehicles
+| Class ID | Name | Category |
+|----------|------|----------|
+| 1 | bicycle | Vehicle |
+| 2 | car | Vehicle |
+| 3 | motorcycle | Vehicle |
+| 4 | airplane | Vehicle |
+| 5 | bus | Vehicle |
+| 6 | train | Vehicle |
+| 7 | truck | Vehicle |
+| 8 | boat | Vehicle |
 
-### Trafik ve Dış Mekan
-| Class ID | İngilizce İsim | Türkçe İsim | Kategori |
-|----------|----------------|-------------|-----------|
-| 9 | traffic light | trafik ışığı | Trafik |
-| 10 | fire hydrant | yangın musluğu | Dış Mekan |
-| 11 | stop sign | dur işareti | Trafik |
-| 12 | parking meter | parkmetre | Trafik |
-| 13 | bench | bank | Dış Mekan |
+### Traffic and Outdoor
+| Class ID | Name | Category |
+|----------|------|----------|
+| 9 | traffic light | Traffic |
+| 10 | fire hydrant | Outdoor |
+| 11 | stop sign | Traffic |
+| 12 | parking meter | Traffic |
+| 13 | bench | Outdoor |
 
-### Aksesuar ve Eşyalar
-| Class ID | İngilizce İsim | Türkçe İsim | Kategori |
-|----------|----------------|-------------|-----------|
-| 24 | backpack | sırt çantası | Aksesuar |
-| 25 | umbrella | şemsiye | Aksesuar |
-| 26 | handbag | el çantası | Aksesuar |
-| 27 | tie | kravat | Aksesuar |
-| 28 | suitcase | bavul | Aksesuar |
+### Accessories and Items
+| Class ID | Name | Category |
+|----------|------|----------|
+| 24 | backpack | Accessory |
+| 25 | umbrella | Accessory |
+| 26 | handbag | Accessory |
+| 27 | tie | Accessory |
+| 28 | suitcase | Accessory |
 
-### Spor Ekipmanları
-| Class ID | İngilizce İsim | Türkçe İsim | Kategori |
-|----------|----------------|-------------|-----------|
-| 29 | frisbee | frizbi | Spor |
-| 30 | skis | kayak | Spor |
-| 31 | snowboard | snowboard | Spor |
-| 32 | sports ball | spor topu | Spor |
-| 33 | kite | uçurtma | Spor |
-| 34 | baseball bat | beyzbol sopası | Spor |
-| 35 | baseball glove | beyzbol eldiveni | Spor |
-| 36 | skateboard | kaykay | Spor |
-| 37 | surfboard | sörf tahtası | Spor |
-| 38 | tennis racket | tenis raketi | Spor |
+### Sports Equipment
+| Class ID | Name | Category |
+|----------|------|----------|
+| 29 | frisbee | Sports |
+| 30 | skis | Sports |
+| 31 | snowboard | Sports |
+| 32 | sports ball | Sports |
+| 33 | kite | Sports |
+| 34 | baseball bat | Sports |
+| 35 | baseball glove | Sports |
+| 36 | skateboard | Sports |
+| 37 | surfboard | Sports |
+| 38 | tennis racket | Sports |
 
-### İçecek ve Yemek Kapları
-| Class ID | İngilizce İsim | Türkçe İsim | Kategori |
-|----------|----------------|-------------|-----------|
-| 39 | bottle | şişe | İçecek |
-| 40 | wine glass | şarap kadehi | İçecek |
-| 41 | cup | fincan/bardak | İçecek |
-| 42 | fork | çatal | Yemek |
-| 43 | knife | bıçak | Yemek |
-| 44 | spoon | kaşık | Yemek |
-| 45 | bowl | kase | Yemek |
+### Beverages and Dining
+| Class ID | Name | Category |
+|----------|------|----------|
+| 39 | bottle | Beverage |
+| 40 | wine glass | Beverage |
+| 41 | cup | Beverage |
+| 42 | fork | Dining |
+| 43 | knife | Dining |
+| 44 | spoon | Dining |
+| 45 | bowl | Dining |
 
-### Yiyecekler
-| Class ID | İngilizce İsim | Türkçe İsim | Kategori |
-|----------|----------------|-------------|-----------|
-| 46 | banana | muz | Meyve |
-| 47 | apple | elma | Meyve |
-| 48 | sandwich | sandviç | Yemek |
-| 49 | orange | portakal | Meyve |
-| 50 | broccoli | brokoli | Sebze |
-| 51 | carrot | havuç | Sebze |
-| 52 | hot dog | sosisli | Yemek |
-| 53 | pizza | pizza | Yemek |
-| 54 | donut | donut | Yemek |
-| 55 | cake | pasta | Yemek |
+### Food
+| Class ID | Name | Category |
+|----------|------|----------|
+| 46 | banana | Fruit |
+| 47 | apple | Fruit |
+| 48 | sandwich | Food |
+| 49 | orange | Fruit |
+| 50 | broccoli | Vegetable |
+| 51 | carrot | Vegetable |
+| 52 | hot dog | Food |
+| 53 | pizza | Food |
+| 54 | donut | Food |
+| 55 | cake | Food |
 
-### Mobilya ve Ev Eşyaları
-| Class ID | İngilizce İsim | Türkçe İsim | Kategori |
-|----------|----------------|-------------|-----------|
-| 56 | chair | sandalye | Mobilya |
-| 57 | couch | kanepe | Mobilya |
-| 58 | potted plant | saksı bitkisi | Dekor |
-| 59 | bed | yatak | Mobilya |
-| 60 | dining table | yemek masası | Mobilya |
-| 61 | toilet | tuvalet | Banyo |
+### Furniture and Home
+| Class ID | Name | Category |
+|----------|------|----------|
+| 56 | chair | Furniture |
+| 57 | couch | Furniture |
+| 58 | potted plant | Decor |
+| 59 | bed | Furniture |
+| 60 | dining table | Furniture |
+| 61 | toilet | Bathroom |
 
-### Elektronik Cihazlar
-| Class ID | İngilizce İsim | Türkçe İsim | Kategori |
-|----------|----------------|-------------|-----------|
-| 62 | tv | televizyon | Elektronik |
-| 63 | laptop | laptop | Elektronik |
-| 64 | mouse | fare (bilgisayar) | Elektronik |
-| 65 | remote | kumanda | Elektronik |
-| 66 | keyboard | klavye | Elektronik |
-| 67 | cell phone | cep telefonu | Elektronik |
+### Electronics
+| Class ID | Name | Category |
+|----------|------|----------|
+| 62 | tv | Electronics |
+| 63 | laptop | Electronics |
+| 64 | mouse | Electronics |
+| 65 | remote | Electronics |
+| 66 | keyboard | Electronics |
+| 67 | cell phone | Electronics |
 
-### Ev Aletleri
-| Class ID | İngilizce İsim | Türkçe İsim | Kategori |
-|----------|----------------|-------------|-----------|
-| 68 | microwave | mikrodalga | Ev Aleti |
-| 69 | oven | fırın | Ev Aleti |
-| 70 | toaster | ekmek kızartma makinesi | Ev Aleti |
-| 71 | sink | lavabo | Ev Aleti |
-| 72 | refrigerator | buzdolabı | Ev Aleti |
+### Appliances
+| Class ID | Name | Category |
+|----------|------|----------|
+| 68 | microwave | Appliance |
+| 69 | oven | Appliance |
+| 70 | toaster | Appliance |
+| 71 | sink | Appliance |
+| 72 | refrigerator | Appliance |
 
-### Diğer Eşyalar
-| Class ID | İngilizce İsim | Türkçe İsim | Kategori |
-|----------|----------------|-------------|-----------|
-| 73 | book | kitap | Kırtasiye |
-| 74 | clock | saat | Dekor |
-| 75 | vase | vazo | Dekor |
-| 76 | scissors | makas | Kırtasiye |
-| 77 | teddy bear | oyuncak ayı | Oyuncak |
-| 78 | hair drier | saç kurutma makinesi | Kişisel Bakım |
-| 79 | toothbrush | diş fırçası | Kişisel Bakım |
+### Miscellaneous
+| Class ID | Name | Category |
+|----------|------|----------|
+| 73 | book | Stationery |
+| 74 | clock | Decor |
+| 75 | vase | Decor |
+| 76 | scissors | Stationery |
+| 77 | teddy bear | Toy |
+| 78 | hair drier | Personal Care |
+| 79 | toothbrush | Personal Care |
 
-## SAHI'de Class Kullanımı
+## Using Classes in SAHI
 
-### Python Kodu Örneği
+### Python Code Example
 ```python
 from sahi import AutoDetectionModel
 from sahi.predict import get_sliced_prediction
 
-# COCO class names listesi
+# COCO class names list
 COCO_CLASSES = [
     'person', 'bicycle', 'car', 'motorcycle', 'airplane', 'bus', 'train', 'truck',
     'boat', 'traffic light', 'fire hydrant', 'stop sign', 'parking meter', 'bench',
@@ -151,7 +151,7 @@ COCO_CLASSES = [
     'toothbrush'
 ]
 
-# Model yükleme
+# Load model
 detection_model = AutoDetectionModel.from_pretrained(
     model_type='yolov8',
     model_path="yolo11n.pt",
@@ -159,7 +159,7 @@ detection_model = AutoDetectionModel.from_pretrained(
     device="cpu"
 )
 
-# Prediction
+# Run prediction
 result = get_sliced_prediction(
     image="test_image.jpg",
     detection_model=detection_model,
@@ -169,13 +169,13 @@ result = get_sliced_prediction(
     overlap_width_ratio=0.2
 )
 
-# Sonuçları göster
+# Display results
 for object_prediction in result.object_prediction_list:
     class_id = object_prediction.category.id
     class_name = COCO_CLASSES[class_id]
     confidence = object_prediction.score.value
     bbox = object_prediction.bbox
-    
+
     print(f"Class ID: {class_id}")
     print(f"Class Name: {class_name}")
     print(f"Confidence: {confidence:.2f}")
@@ -183,34 +183,34 @@ for object_prediction in result.object_prediction_list:
     print("---")
 ```
 
-### Belirli Sınıfları Filtreleme
+### Filtering Specific Classes
 ```python
-# Sadece person (0) ve car (2) sınıflarını göster
-target_classes = [0, 2]  # person ve car
+# Show only person (0) and car (2) classes
+target_classes = [0, 2]  # person and car
 filtered_predictions = [
-    pred for pred in result.object_prediction_list 
+    pred for pred in result.object_prediction_list
     if pred.category.id in target_classes
 ]
 
-# Sınıf isimlerini almak için
+# Get class names
 for pred in filtered_predictions:
     class_name = COCO_CLASSES[pred.category.id]
     print(f"Detected: {class_name}")
 ```
 
-## Önemli Notlar
+## Important Notes
 
-1. **Model Bağımlılığı**: Class ID'ler kullandığınız model türüne bağlıdır:
-   - YOLOv8/v11: COCO 80 sınıf
-   - Custom modeller: Eğitim dataset'ine bağlı
-   - MMDetection: Dataset konfigürasyonuna bağlı
+1. **Model Dependency**: Class IDs depend on your model type:
+   - YOLOv8/v11: COCO 80 classes
+   - Custom models: Depends on training dataset
+   - MMDetection: Depends on dataset configuration
 
-2. **Index Başlangıcı**: COCO'da class ID'ler 0'dan başlar (person = 0)
+2. **Index Start**: COCO class IDs start from 0 (person = 0)
 
-3. **Background Class**: Bazı implementasyonlarda class 0 background olabilir, bu durumda person class 1 olur
+3. **Background Class**: In some implementations, class 0 may be background, making person class 1
 
-4. **Confidence Threshold**: Her sınıf için farklı confidence threshold'lar kullanılabilir
+4. **Confidence Threshold**: Different confidence thresholds can be used for each class
 
-5. **Custom Classes**: Kendi dataset'inizle eğittiğiniz modellerde bu liste farklı olacaktır
+5. **Custom Classes**: Models trained on your own dataset will have different class lists
 
-Bu liste, SAHI ile birlikte kullanılan standart COCO dataset sınıflarını içermektedir. Kendi modelinizin class listesini kontrol etmek için model dosyasındaki metadata'yı inceleyebilirsiniz.
+This list contains the standard COCO dataset classes used with SAHI. To check your model's class list, inspect the metadata in your model file.
