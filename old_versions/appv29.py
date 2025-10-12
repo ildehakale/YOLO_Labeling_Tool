@@ -1018,9 +1018,9 @@ class ModernImageNavigator(QMainWindow):
         header_layout.addStretch()
 
         nav_layout = QHBoxLayout()
-        self.fullscreen_btn = ModernButton("Tam Ekran")
-        self.prev_btn = ModernButton("⬅️ Önceki")
-        self.next_btn = ModernButton("Sonraki ➡️")
+        self.fullscreen_btn = ModernButton("Fullscreen ")
+        self.prev_btn = ModernButton("Prev ")
+        self.next_btn = ModernButton("Next ")
 
         nav_layout.addWidget(self.fullscreen_btn)
         nav_layout.addWidget(self.prev_btn)
