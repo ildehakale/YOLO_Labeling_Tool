@@ -1,5 +1,5 @@
 # Models and environments
-/models
+
 /label_env
 /old_versions
 
@@ -10,6 +10,10 @@ __pycache__/
 
 # C extensions
 *.so
+
+# Pytorch and Onnx model files
+*.pt
+*.onnx
 
 # Distribution / packaging
 .Python
