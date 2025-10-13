@@ -6,7 +6,7 @@ A professional-grade visual labeling tool for YOLO object detection models, feat
 
 ## Demo
 
-![Demo](demo.gif)
+![Demo](assets/demo.gif)
 
 
 

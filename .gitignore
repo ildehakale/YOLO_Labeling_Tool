@@ -11,9 +11,9 @@ __pycache__/
 # C extensions
 *.so
 
-# GIF files (except demo)
+# GIF files (except assets folder)
 *.gif
-!demo.gif
+!assets/*.gif
 
 # Pytorch and Onnx model files
 *.pt
