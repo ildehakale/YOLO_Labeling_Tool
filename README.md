@@ -44,7 +44,7 @@ Or download and extract the ZIP file.
 pip install -r requirements.txt
 ```
 
-For LinuxOS (Ubuntu)
+#### For LinuxOS (Ubuntu)
 1. Install **libxcb** 
 ```bash
 sudo apt-get install -y libxcb-xinerama0 libxcb-cursor0 libxkbcommon-x11-0
