@@ -4,6 +4,10 @@ A professional-grade visual labeling tool for YOLO object detection models, feat
 
 ![Python](https://img.shields.io/badge/python-3.8+-green)
 
+## Demo
+
+![Demo](demo.gif)
+
 
 
 
