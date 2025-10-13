@@ -44,6 +44,18 @@ Or download and extract the ZIP file.
 pip install -r requirements.txt
 ```
 
+For LinuxOS (Ubuntu)
+1. Install **libxcb** 
+```bash
+sudo apt-get install -y libxcb-xinerama0 libxcb-cursor0 libxkbcommon-x11-0
+```
+2. Uncomment the lines from **main.py** 
+
+```bash
+    # Linux platform settings (uncomment if needed)
+    os.environ["QT_QPA_PLATFORM_PLUGIN_PATH"] = "/usr/lib/x86_64-linux-gnu/qt5/plugins/platforms"
+    os.environ["QT_QPA_PLATFORM"] = "xcb"
+```
 
 
 ### Step 3: Prepare Model Directory

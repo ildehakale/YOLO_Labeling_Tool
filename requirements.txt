@@ -1,24 +1,23 @@
 # GUI Framework
-PyQt5==5.15.11
+PyQt5
 
 # Deep Learning & YOLO
-torch==2.1.2
-torchvision==0.16.2
-ultralytics==8.3.180
+torch
+torchvision
+ultralytics
 
 # SAHI - Sliced Aided Hyper Inference
 sahi==0.11.32
 
 # Computer Vision & Image Processing
-opencv-python==4.10.0.84
-pillow==10.2.0
-
+opencv-python
+pillow
 # ONNX Runtime (for ONNX models)
-onnxruntime-gpu==1.21.0
+onnxruntime-gpu
 
 # Scientific Computing
-numpy==1.26.4
+numpy
 
 # Utilities
-tqdm==4.67.1
-pyyaml==5.4.1
+tqdm
+pyyaml
